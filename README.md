@@ -3,4 +3,4 @@ This repository holds the files for the CSC6301 Software Design & Documentation 
 
 ## Table of Contents
 - [Module 04 - Sorted Linked List](https://github.com/KatieBarnes147/CSC6301/tree/main/Module%204)
-- [Module 05 - Sorted Stack]()
+- [Module 05 - Sorted Stack](https://github.com/KatieBarnes147/CSC6301/tree/main/Module%205)
