@@ -1,1 +1,62 @@
+import java.util.Stack;
+import java.util.Collections;
+import java.util.Scanner;
 
+/**
+ * This class demonstrates a maintenance task where the original
+ * LinkedList-based
+ * project is adapted to use a Stack. It reads integers from user input, stores
+ * them in a Stack, sorts the Stack in ascending order, and then prints the
+ * sorted Stack.
+ * 
+ * The program demonstrates:
+ * - Use of Java Collections Framework.
+ * - Proper code reuse by leveraging Stack's methods (e.g., push) and
+ * Collections.sort().
+ * - A clear and correct design with detailed Javadoc documentation.
+ * 
+ * The design follows best practices ensuring maintainability and clarity.
+ */
+public class Project4 {
+
+    /**
+     * The main method serves as the entry point to the program. It reads integer
+     * inputs
+     * from the user, stores them in a Stack, sorts the Stack using Collections
+     * Framework,
+     * and prints the sorted list.
+     *
+     * Example:
+     * Input: 45, 12, 78, 3, 56
+     * Output: Sorted stack: [3, 12, 45, 56, 78]
+     *
+     * Code reuse:
+     * - The push() method of the Stack class is reused to add elements.
+     * - The Collections.sort() method is reused to sort the stack in ascending
+     * order.
+     * 
+     * @param args command-line arguments (not used in this program).
+     */
+    public static void main(String[] args) {
+        // Create a Stack to store the integers
+        Stack<Integer> stack = new Stack<>();
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter numbers
+        System.out.println("Enter numbers (non-integer to stop):");
+
+        // Reusing Stack's push() method to add elements to the stack
+        while (scanner.hasNextInt()) {
+            stack.push(scanner.nextInt());
+        }
+
+        // Sorting the stack using the Collections.sort() method
+        Collections.sort(stack);
+
+        // Print the sorted stack
+        System.out.println("Sorted stack: " + stack);
+
+        // Close the scanner to prevent resource leak
+        scanner.close();
+    }
+}
